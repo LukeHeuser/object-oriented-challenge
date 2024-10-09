@@ -5,6 +5,20 @@ public class BankAccount {
     private String customerEmail;
     private int phoneNumber;
 
+    public BankAccount () {
+        System.out.println("Empty constructor called!");
+    }
+
+    public BankAccount(int accountNumber, double accountBalance, String customerName, String customerEmail,
+                       int phoneNumber) {
+        System.out.println("BankAccount constructor with parameters called!");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.phoneNumber = phoneNumber;
+    }
+
     public void depositFunds(double deposit){ // Method that adds a deposit to the balance.
         accountBalance += deposit;
         System.out.println("Good day, " + customerName + ". Your new account balance after depositing $" + deposit + " is $" +

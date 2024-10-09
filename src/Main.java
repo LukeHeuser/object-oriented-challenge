@@ -1,18 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.setCustomerName("Luke");
-        bankAccount.setCustomerEmail("Luke.heuser@crazyzanny.com");
-        bankAccount.setPhoneNumber(1081291234);
-        bankAccount.setAccountNumber(12323);
-        bankAccount.setAccountBalance(1000);
+        BankAccount lukesAccount = new BankAccount(12323, 1000, "Luke",
+                "Luke.heuser@crazyzanny.com", 1020450968);
 
-        bankAccount.depositFunds(1500);
-        bankAccount.withdrawFunds(2500.01);
-        bankAccount.withdrawFunds(2500);
-        bankAccount.depositFunds(1565.45);
-        bankAccount.depositFunds(434.55);
-        bankAccount.withdrawFunds(2000.01);
+
+        System.out.println(lukesAccount.getAccountBalance());
+        System.out.println(lukesAccount.getAccountNumber());
+
+//        bankAccount.setCustomerName("Luke");
+//        bankAccount.setCustomerEmail("Luke.heuser@crazyzanny.com");
+//        bankAccount.setPhoneNumber(1081291234);
+//        bankAccount.setAccountNumber(12323);
+//        bankAccount.setAccountBalance(1000);
+
+        lukesAccount.depositFunds(1500);
+        lukesAccount.withdrawFunds(2500.01);
+        lukesAccount.withdrawFunds(2500);
+        lukesAccount.depositFunds(1565.45);
+        lukesAccount.depositFunds(434.55);
+        lukesAccount.withdrawFunds(2000.01);
 
     }
 }
