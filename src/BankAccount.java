@@ -6,6 +6,9 @@ public class BankAccount {
     private int phoneNumber;
 
     public BankAccount () {
+        this(12345, 500.50, "Luke", // This is calling a constructor
+                "Crazy.fun@gmail.com", 1016578945);               // within a constructor.
+                                                                                // constructor chaining!
         System.out.println("Empty constructor called!");
     }
 
@@ -17,6 +20,14 @@ public class BankAccount {
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(String customerName, String customerEmail, int phoneNumber) {
+        this(99999,105, customerName, customerEmail, phoneNumber);
+
+//        this.customerName = customerName; // There is no need to assign fields here, this is done in the constructor.
+//        this.customerEmail = customerEmail;
+//        this.phoneNumber = phoneNumber;
     }
 
     public void depositFunds(double deposit){ // Method that adds a deposit to the balance.
